@@ -223,6 +223,7 @@ _cairo_xlib_display_get (Display *dpy)
      * app, and the CloseDisplay hook is the only other place we
      * acquire this mutex.
      */
+    //
     CAIRO_MUTEX_LOCK (_cairo_xlib_display_mutex);
 
     for (prev = &_cairo_xlib_display_list; (display = *prev); prev = &(*prev)->next)
